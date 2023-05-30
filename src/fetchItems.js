@@ -2,8 +2,6 @@
 const AWS = require("aws-sdk");
 
 const fetchItems = async (event) => {
-  //module.exports.fetchItems = async (event) => {
-
     const dynamodb = new AWS.DynamoDB.DocumentClient();
 
     let items;
@@ -16,7 +14,7 @@ const fetchItems = async (event) => {
         items = results.Items;
 
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 
     return {
